@@ -1,0 +1,15 @@
+/*CSS (cascading style sheets - hojas de estilo en cascada) es un lenguaje de diseño gráfico con el cual podremos dar estilos (diseño, colores, márgenes) a nuestras webs desarrolladas con HTML. Veremos la sintaxis básica de CSS */
+
+/*Para incluir una hoja de estilo en nuestro documento
+HTML podemos utilizar el elemento <link>. 
+Dentro del archivo CSS externo incluiremos las sentencias correspondientes, como lo hacemos con un archivo css en línea.
+
+Podemos seleccionar uno o más elementos html a través de su clase o su atributo “id” en CSS. O todos los elementos de un tipo
+Modos básicos de “seleccionar/capturar” elementos por su:
+Tipo de elemento (div, ul, li, nav, input)
+-ID (usando # adelante)
+-Clase (usando punto inicial)
+-div { background: lightgray; }
+-#nombre { background: coral; }
+-.apellido
+*/
