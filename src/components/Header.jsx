@@ -2,7 +2,9 @@
 function Header() {
 
     return(
-        <h1>Desde el header</h1>
+        <header>
+        <h1 className="text-4xl font-bold uppercase">Desde el header</h1>
+        </header>
     );
 }
 

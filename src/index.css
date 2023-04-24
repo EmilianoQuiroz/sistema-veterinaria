@@ -1,1 +1,4 @@
-
+/* Llamamos a los paquetes que requerimos de Css*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
