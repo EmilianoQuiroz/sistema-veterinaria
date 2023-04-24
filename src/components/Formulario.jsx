@@ -3,7 +3,14 @@ function Formulario() {
     
 
     return(
-        <h2>Desde el formulario</h2>
+        <div className="md:w-1/2 lg:w-2/5">
+        <h2 className="font-black text-3xl text-center">Seguimiento Pacientes</h2>
+        
+        <p className="text-lg mt-5 text-center">
+            Añadir Pacientes y {''}
+            <span className="text-red-500 font-bold">Administrarlos</span>
+        </p>
+        </div>
     );
 }
 
