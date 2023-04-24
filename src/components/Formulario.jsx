@@ -12,9 +12,9 @@ function Formulario() {
         </p>
 
         {/** Formulario para el ingreso de los pacientes */}
-        <form className="bg-white shadow-md rounded-lg py-10 px-5">
-            <div>
-                <label htmlFor="paciente" className="block text-red-500 uppercase font-bold">
+        <form className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+            <div className="mb-5">
+                <label htmlFor="paciente" className="block text-gray-800 uppercase font-bold">
                     Nombre del Paciente
                 </label>
                 <input
@@ -23,6 +23,52 @@ function Formulario() {
                 placeholder="nombre del paciente" 
                 className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"/>
             </div>
+            <div className="mb-5">
+                <label htmlFor="dueño" className="block text-gray-800 uppercase font-bold">
+                    Nombre del Dueño
+                </label>
+                <input
+                id="dueño" 
+                type="text" 
+                placeholder="nombre del dueño" 
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"/>
+            </div>
+            <div className="mb-5">
+                <label htmlFor="email" className="block text-gray-800 uppercase font-bold">
+                    Email de Contacto
+                </label>
+                <input
+                id="email" 
+                type="email" 
+                placeholder="email de contacto" 
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"/>
+            </div>
+            <div className="mb-5">
+                <label htmlFor="alta" className="block text-gray-800 uppercase font-bold">
+                    Alta del paciente
+                </label>
+                <input
+                id="alta" 
+                type="date" 
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"/>
+            </div>
+            <div className="mb-5">
+                <label htmlFor="sintomas" className="block text-gray-800 uppercase font-bold">
+                    Sintomas
+                </label>
+                <textarea name="" 
+                    id="sintomas" 
+                    className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    placeholder="describe los sintomas"
+                />
+            </div>
+
+            {/** Boton de agregar paciente */}
+            <input 
+                type="submit" 
+                className="bg-red-500 w-full p-3 text-white uppercase font-bold hover:bg-red-700 cursor-pointer transition-all"
+                value="Agregar paciente"
+            />
         </form>
         </div>
     );
