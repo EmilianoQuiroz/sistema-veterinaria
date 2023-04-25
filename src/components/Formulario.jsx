@@ -9,6 +9,13 @@ function Formulario() {
      */
     const [nombre,setNombre] = useState('');    
 
+    /** Funcion handleSubmit */
+    const handleSubmit = () => {
+
+        e.preventDefault();
+
+        console.log("Enviando formulario")
+    }
     return(
         <div className="md:w-1/2 lg:w-2/5">
         <h2 className="font-black text-3xl text-center">Seguimiento Pacientes</h2>
@@ -19,7 +26,10 @@ function Formulario() {
         </p>
 
         {/** Formulario para el ingreso de los pacientes */}
-        <form className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+        <form 
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+        >
             <div className="mb-5">
                 <label htmlFor="paciente" className="block text-gray-800 uppercase font-bold">
                     Nombre del Paciente
