@@ -1,6 +1,13 @@
+// Importacion de los Hooks al formulario
+import {useState, useEffect} from 'react'
+
 // Creamos nuestro functional component
 function Formulario() {
-    
+    /**
+     * Como buena practica el State debe ser declarado en la parte
+     * superior de nuestra funcion antes del return 
+     */
+    const [nombre,setNombre] = useState('');    
 
     return(
         <div className="md:w-1/2 lg:w-2/5">
@@ -21,7 +28,10 @@ function Formulario() {
                 id="paciente" 
                 type="text" 
                 placeholder="nombre del paciente" 
-                className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"/>
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                value={nombre}
+                onChange={(e)=> setNombre(e.target.value)}
+                />
             </div>
             <div className="mb-5">
                 <label htmlFor="dueño" className="block text-gray-800 uppercase font-bold">
