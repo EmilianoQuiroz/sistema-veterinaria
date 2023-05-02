@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react'
 
 // Creamos nuestro functional component
-function Formulario() {
+const Formulario = () => {
     /**
      * Como buena practica el State debe ser declarado en la parte
      * superior de nuestra funcion antes del return 
@@ -15,12 +15,19 @@ function Formulario() {
     const [fecha,setFecha] = useState(''); 
     const [sintomas,setSintomas] = useState('');    
 
+    const [error, setError] = useState(false)
     /** Funcion handleSubmit */
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log("Enviando formulario")
+        // Validacion de formulario
+        if ([nombre, propietario, email, fecha, sintomas].includes('')) {
+            console.log('Hay al menos un campo vacio')
+            
+            setError(true)
+            return;
+        } 
+        setError(false)
     }
     return(
         <div className="md:w-1/2 lg:w-2/5 mx-5">
@@ -36,6 +43,12 @@ function Formulario() {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
         >
+            {/** error es = true entonces imprimo el mensaje en formulario */}
+            { error && (
+            <div className='bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md'>
+                <p>Hay que completar todos los campors del formulario</p>
+            </div>
+            )}
             <div className="mb-5">
                 <label htmlFor="paciente" className="block text-gray-800 uppercase font-bold">
                     Nombre del Paciente
