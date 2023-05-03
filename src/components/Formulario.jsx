@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react'
 
 // Creamos nuestro functional component
-const Formulario = () => {
+const Formulario = ({ pacientes, setPacientes }) => {
     /**
      * Como buena practica el State debe ser declarado en la parte
      * superior de nuestra funcion antes del return 
@@ -27,7 +27,27 @@ const Formulario = () => {
             setError(true)
             return;
         } 
+
         setError(false)
+
+        // Objeto de paciente
+        const objetoPaciente = {
+            nombre, 
+            propietario, 
+            email, 
+            fecha, 
+            sintomas
+        }
+
+        //console.log(objetoPaciente)
+        setPacientes([...pacientes, objetoPaciente]);
+
+        //Reinicio del formulario
+        setNombre('')
+        setPropietario('')
+        setEmail('')
+        setFecha('')
+        setSintomas('')
     }
     return(
         <div className="md:w-1/2 lg:w-2/5 mx-5">
