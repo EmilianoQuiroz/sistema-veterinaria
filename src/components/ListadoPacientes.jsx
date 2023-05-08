@@ -13,11 +13,11 @@ const ListadoPacientes = ({ pacientes }) => {
             </p>
 
             {/** Mapeo de pacientes */}
-            { pacientes.map( (paciente, index) => 
+            { pacientes.map( paciente => 
                     /** El return esta implicito */
                     /** Mostramos el listado de pacientes en pantalla */
                     <Paciente 
-                        key = {index}
+                        key = {paciente.id}
                         paciente = {paciente}
                     />
                 )}
