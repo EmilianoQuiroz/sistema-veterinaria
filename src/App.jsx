@@ -1,3 +1,4 @@
+//Importaciones
 import { useState } from 'react'
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
