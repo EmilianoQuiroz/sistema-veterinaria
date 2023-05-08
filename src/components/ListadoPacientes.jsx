@@ -2,7 +2,7 @@
 import Paciente from "./Paciente";
 
 // Creamos nuestro functional component
-function ListadoPacientes() {
+const ListadoPacientes = ({ pacientes }) => {
 
     return (
         <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
@@ -11,16 +11,17 @@ function ListadoPacientes() {
             <p className="text-xl mt-5 mb-10 text-center">Administra tus {''}
                 <span className="text-red-500 font-bold">Pacientes y Turnos</span>
             </p>
-            
-            {/** Mostramos el listado de pacientes en pantalla */}
-            <Paciente />
-            <Paciente />
-            <Paciente />
-            <Paciente />
-            <Paciente />
-            <Paciente />
-            <Paciente />
-            <Paciente />
+
+            {/** Mapeo de pacientes */}
+            { pacientes.map( (paciente, index) => 
+                    /** El return esta implicito */
+                    /** Mostramos el listado de pacientes en pantalla */
+                    <Paciente 
+                        key = {index}
+                        paciente = {paciente}
+                    />
+                )}
+
 
         </div>
     );
