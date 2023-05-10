@@ -18,9 +18,9 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
 
     const [error, setError] = useState(false)
 
-    useEffect(() => {
+    // useEffect(() => {
                 
-    }, [paciente])
+    // }, [paciente])
 
     /** Funcion para generar id unico */
     const generarId = () => {

@@ -1,8 +1,20 @@
 // Importamos el listado de pacientes
+//import { useEffect } from "react";
 import Paciente from "./Paciente";
 
 // Creamos nuestro functional component
 const ListadoPacientes = ({ pacientes, setPaciente }) => {
+
+    /** Imprimimos un console.log siempre que el listado de 
+     * pacientes tenga un paciente registrado 
+     * */
+    // useEffect(() => {
+        
+    //     if(pacientes.length > 0){
+    //     console.log('Nuevo paciente registrado')
+    //     }
+
+    // }, [ pacientes ])
 
     return (
         <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
