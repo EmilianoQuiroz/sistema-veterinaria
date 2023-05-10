@@ -1,4 +1,4 @@
-const Paciente = ({ paciente }) => {
+const Paciente = ({ paciente, setPaciente }) => {
 
     {/** Desestructuracion */}
     const {nombre, propietario, email, fecha, sintomas} = paciente
@@ -25,6 +25,7 @@ const Paciente = ({ paciente }) => {
                 <button
                     type="button"
                     className="py-2 px-10 bg-blue-500 hover:bg-blue-700 text-white font-bold uppercase rounded-md"
+                    onClick={() => setPaciente(paciente)}
                 >
                     Editar
                 </button>

@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import Error from './Error'
 
 // Creamos nuestro functional component
-const Formulario = ({ pacientes, setPacientes }) => {
+const Formulario = ({ pacientes, setPacientes, paciente }) => {
     /**
      * Como buena practica el State debe ser declarado en la parte
      * superior de nuestra funcion antes del return 
@@ -17,6 +17,11 @@ const Formulario = ({ pacientes, setPacientes }) => {
     const [sintomas,setSintomas] = useState('');    
 
     const [error, setError] = useState(false)
+
+    useEffect(() => {
+                
+    }, [paciente])
+
     /** Funcion para generar id unico */
     const generarId = () => {
         
