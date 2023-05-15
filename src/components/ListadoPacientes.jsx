@@ -3,7 +3,7 @@
 import Paciente from "./Paciente";
 
 // Creamos nuestro functional component
-const ListadoPacientes = ({ pacientes, setPaciente }) => {
+const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente }) => {
 
     /** Imprimimos un console.log siempre que el listado de 
      * pacientes tenga un paciente registrado 
@@ -34,6 +34,7 @@ const ListadoPacientes = ({ pacientes, setPaciente }) => {
                                 key = {paciente.id}
                                 paciente = {paciente}
                                 setPaciente = {setPaciente}
+                                eliminarPaciente ={eliminarPaciente}
                             />
                         )}
                 </>
