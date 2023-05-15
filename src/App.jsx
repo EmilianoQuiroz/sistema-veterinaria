@@ -6,14 +6,14 @@ import ListadoPacientes from "./components/ListadoPacientes";
 
 function App() {
 
-  const [pacientes, setPacientes] = useState([]);
+  const [pacientes, setPacientes] = useState(JSON.parse(localStorage.getItem('pacientes')) ?? []);
   const [paciente, setPaciente] = useState({});
 
-  // Local Storage
+  // local storage
   useEffect(() => {
-
-    localStorage.setItem('pacientes', JSON.stringify(pacientes))
+    localStorage.setItem('pacientes', JSON.stringify( pacientes ));
   }, [pacientes])
+
   // Funcion para eliminar pacientes
   const eliminarPaciente = id => {
     const pacientesActualizados = pacientes.filter( paciente => paciente.id !== id);
