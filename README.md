@@ -24,7 +24,8 @@ https://amazing-brigadeiros-74ad89.netlify.app/
 
 ### Desktop:
 
-https://github.com/EmilianoQuiroz/sistema-veterinaria/assets/78452543/9d1687b2-14a4-4934-9a15-6b3b6dacf41d
+Uploading sistema-veterinaria.mp4…
+
 
 
 
