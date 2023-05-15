@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import Error from './Error'
 
 // Creamos nuestro functional component
-const Formulario = ({ pacientes, setPacientes, paciente }) => {
+const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
     /**
      * Como buena practica el State debe ser declarado en la parte
      * superior de nuestra funcion antes del return 
@@ -56,12 +56,28 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
             propietario, 
             email, 
             fecha, 
-            sintomas,
-            id: generarId()
+            sintomas
         }
 
-        //console.log(objetoPaciente)
-        setPacientes([...pacientes, objetoPaciente]);
+        //Validacion para editar paciente
+        if(paciente.id){
+            // Editando el resgistro
+            objetoPaciente.id = paciente.id
+            console.log(objetoPaciente)
+            console.log(paciente)
+
+            // Pacientes Actualizados
+            const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id === paciente.id ? objetoPaciente :pacienteState)
+
+            setPacientes(pacientesActualizados)
+            setPaciente({})
+
+        }else{
+            // Generacion de Id
+            objetoPaciente.id = generarId();
+            // Nuevo registro
+            setPacientes([...pacientes, objetoPaciente])
+        }
 
         //Reinicio del formulario
         setNombre('')
